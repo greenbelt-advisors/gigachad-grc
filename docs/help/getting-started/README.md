@@ -46,12 +46,12 @@ Integrations automate evidence collection from your existing tools.
 
 ### Recommended First Integrations
 
-| Priority | Integration | Why |
-|----------|-------------|-----|
-| 1 | Cloud Provider (AWS/GCP/Azure) | Provides infrastructure security evidence |
-| 2 | Identity Provider (Okta/Azure AD) | Shows user access management |
-| 3 | Version Control (GitHub/GitLab) | Demonstrates secure development practices |
-| 4 | HR System (BambooHR/Workday) | Powers employee compliance tracking |
+| Priority | Integration                       | Why                                       |
+| -------- | --------------------------------- | ----------------------------------------- |
+| 1        | Cloud Provider (AWS/GCP/Azure)    | Provides infrastructure security evidence |
+| 2        | Identity Provider (Okta/Azure AD) | Shows user access management              |
+| 3        | Version Control (GitHub/GitLab)   | Demonstrates secure development practices |
+| 4        | HR System (BambooHR/Workday)      | Powers employee compliance tracking       |
 
 ### How to Connect
 
@@ -113,11 +113,11 @@ Your Trust Center is your public-facing security portal:
 
 Now that you're set up, explore these areas:
 
-- **[Managing Risks](/help/risk-management/creating-risks.md)** - Document and track security risks
-- **[Policy Management](/help/policies/creating-policies.md)** - Create and maintain security policies
-- **[Vendor Management](/help/vendors/vendor-assessment.md)** - Assess third-party vendor risks
-- **[Evidence Collection](/help/evidence/collecting-evidence.md)** - Automate compliance evidence
-- **[Preparing for Audits](/help/audits/preparing-for-audit.md)** - Get audit-ready
+- **[Managing Risks](../risk-management/creating-risks.md)** - Document and track security risks
+- **[Policy Management](../compliance/policies.md)** - Create and maintain security policies
+- **[Vendor Management](../vendors/vendor-assessment.md)** - Assess third-party vendor risks
+- **[Evidence Collection](../compliance/evidence.md)** - Automate compliance evidence
+- **[Preparing for Audits](../audit/overview.md)** - Get audit-ready
 
 ## Need Help?
 
@@ -127,5 +127,4 @@ Now that you're set up, explore these areas:
 
 ---
 
-*Last updated: December 2025*
-
+_Last updated: December 2025_

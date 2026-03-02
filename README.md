@@ -15,12 +15,12 @@ A comprehensive, modular, containerized Governance, Risk, and Compliance (GRC) p
 
 ### Prerequisites
 
-| Requirement | Minimum | Notes |
-|-------------|---------|-------|
-| **Docker Desktop** | v4.0+ | [Download for Mac](https://www.docker.com/products/docker-desktop/) / [Windows](https://www.docker.com/products/docker-desktop/) (requires WSL 2) / Linux: `curl -fsSL https://get.docker.com \| sh` |
-| **RAM** | 8 GB | 16 GB recommended |
-| **CPU** | 4 cores | 8 cores recommended |
-| **Disk** | 10 GB free | 20 GB recommended |
+| Requirement        | Minimum    | Notes                                                                                                                                                                                                |
+| ------------------ | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Docker Desktop** | v4.0+      | [Download for Mac](https://www.docker.com/products/docker-desktop/) / [Windows](https://www.docker.com/products/docker-desktop/) (requires WSL 2) / Linux: `curl -fsSL https://get.docker.com \| sh` |
+| **RAM**            | 8 GB       | 16 GB recommended                                                                                                                                                                                    |
+| **CPU**            | 4 cores    | 8 cores recommended                                                                                                                                                                                  |
+| **Disk**           | 10 GB free | 20 GB recommended                                                                                                                                                                                    |
 
 > **No Node.js, npm, or other development tools required.** Everything runs inside Docker containers.
 
@@ -51,13 +51,13 @@ When the browser opens to `http://localhost:3000`, click the **"Dev Login"** but
 
 ### Manage the Platform
 
-| Command | Description |
-|---------|-------------|
-| `./start.sh` | Start the platform |
-| `./start.sh stop` | Stop all services |
-| `./start.sh logs` | View live logs |
-| `./start.sh status` | Check service health |
-| `./start.sh reset` | Stop and remove all containers and volumes |
+| Command             | Description                                |
+| ------------------- | ------------------------------------------ |
+| `./start.sh`        | Start the platform                         |
+| `./start.sh stop`   | Stop all services                          |
+| `./start.sh logs`   | View live logs                             |
+| `./start.sh status` | Check service health                       |
+| `./start.sh reset`  | Stop and remove all containers and volumes |
 
 ---
 
@@ -98,18 +98,18 @@ Set `VITE_ENABLE_DEV_AUTH=true` to enable the Dev Login button (required for loc
 
 Docker Compose will **refuse to start** if any of these variables are missing or empty:
 
-| Variable | Description | Example Value |
-|----------|-------------|---------------|
-| `POSTGRES_USER` | Database username | `grc` |
-| `POSTGRES_PASSWORD` | Database password | *(generate with openssl)* |
-| `REDIS_PASSWORD` | Redis password | *(generate with openssl)* |
-| `MINIO_ROOT_USER` | RustFS/S3 storage username | `rustfsadmin` |
-| `MINIO_ROOT_PASSWORD` | RustFS/S3 storage password | *(generate with openssl)* |
-| `KEYCLOAK_ADMIN_PASSWORD` | Keycloak admin password | *(generate with openssl)* |
-| `ENCRYPTION_KEY` | AES encryption key (64 hex chars) | *(generate with openssl)* |
-| `PHISHING_TRACKING_SECRET` | Phishing module signing secret | *(generate with openssl)* |
-| `GRAFANA_ADMIN_USER` | Grafana admin username | `admin` |
-| `GRAFANA_ADMIN_PASSWORD` | Grafana admin password | *(generate with openssl)* |
+| Variable                   | Description                       | Example Value             |
+| -------------------------- | --------------------------------- | ------------------------- |
+| `POSTGRES_USER`            | Database username                 | `grc`                     |
+| `POSTGRES_PASSWORD`        | Database password                 | _(generate with openssl)_ |
+| `REDIS_PASSWORD`           | Redis password                    | _(generate with openssl)_ |
+| `MINIO_ROOT_USER`          | RustFS/S3 storage username        | `rustfsadmin`             |
+| `MINIO_ROOT_PASSWORD`      | RustFS/S3 storage password        | _(generate with openssl)_ |
+| `KEYCLOAK_ADMIN_PASSWORD`  | Keycloak admin password           | _(generate with openssl)_ |
+| `ENCRYPTION_KEY`           | AES encryption key (64 hex chars) | _(generate with openssl)_ |
+| `PHISHING_TRACKING_SECRET` | Phishing module signing secret    | _(generate with openssl)_ |
+| `GRAFANA_ADMIN_USER`       | Grafana admin username            | `admin`                   |
+| `GRAFANA_ADMIN_PASSWORD`   | Grafana admin password            | _(generate with openssl)_ |
 
 ### Step 3: Start
 
@@ -188,22 +188,22 @@ docker compose down -v
 
 ## Access Points
 
-| Service | URL | Credentials |
-|---------|-----|-------------|
-| **Frontend** | http://localhost:3000 | Click "Dev Login" |
-| **Controls API** | http://localhost:3001/api/docs | Swagger UI |
-| **Frameworks API** | http://localhost:3002/api/docs | Swagger UI |
-| **Grafana** | http://localhost:3003 | Set in `.env` |
-| **Policies API** | http://localhost:3004/api/docs | Swagger UI |
-| **TPRM API** | http://localhost:3005/api/docs | Swagger UI |
-| **Trust API** | http://localhost:3006/api/docs | Swagger UI |
-| **Audit API** | http://localhost:3007/api/docs | Swagger UI |
-| **Keycloak Admin** | http://localhost:8080 | Set in `.env` |
-| **Traefik Dashboard** | http://localhost:8090 | None |
-| **RustFS Console** | http://localhost:9001 | Set in `.env` |
-| **Prometheus** | http://localhost:9090 | None |
-| **PostgreSQL** | localhost:5433 | Set in `.env` |
-| **Redis** | localhost:6380 | Set in `.env` |
+| Service               | URL                            | Credentials       |
+| --------------------- | ------------------------------ | ----------------- |
+| **Frontend**          | http://localhost:3000          | Click "Dev Login" |
+| **Controls API**      | http://localhost:3001/api/docs | Swagger UI        |
+| **Frameworks API**    | http://localhost:3002/api/docs | Swagger UI        |
+| **Grafana**           | http://localhost:3003          | Set in `.env`     |
+| **Policies API**      | http://localhost:3004/api/docs | Swagger UI        |
+| **TPRM API**          | http://localhost:3005/api/docs | Swagger UI        |
+| **Trust API**         | http://localhost:3006/api/docs | Swagger UI        |
+| **Audit API**         | http://localhost:3007/api/docs | Swagger UI        |
+| **Keycloak Admin**    | http://localhost:8080          | Set in `.env`     |
+| **Traefik Dashboard** | http://localhost:8090          | None              |
+| **RustFS Console**    | http://localhost:9001          | Set in `.env`     |
+| **Prometheus**        | http://localhost:9090          | None              |
+| **PostgreSQL**        | localhost:5433                 | Set in `.env`     |
+| **Redis**             | localhost:6380                 | Set in `.env`     |
 
 ---
 
@@ -230,18 +230,18 @@ See the [Deployment Guide](docs/DEPLOYMENT.md) and [Production Deployment Checkl
 
 GigaChad GRC is a complete enterprise GRC solution organized into specialized modules:
 
-| Module | Description |
-|--------|-------------|
-| **Compliance** | Controls library, framework readiness (SOC 2, ISO 27001, NIST CSF, PCI DSS, HIPAA), evidence collection, cross-framework mapping |
-| **Risk Management** | Risk register, likelihood/impact scoring, heatmaps, treatment tracking, scenario modeling, risk workflows |
-| **Policies** | Policy lifecycle management with versioning, approval workflows, review scheduling |
-| **Third-Party Risk (TPRM)** | Vendor management, security assessments, contract lifecycle, SLA tracking |
-| **Trust** | Security questionnaires, knowledge base, public-facing trust center portal |
-| **Audit** | Internal/external audit management, evidence requests, findings, auditor portal, FieldGuide integration |
-| **Tools** | Security awareness training, phishing simulations, certificate management |
-| **AI & Automation** | AI-powered risk scoring, auto-categorization, smart search, MCP server integration |
-| **Integrations** | AWS, Azure, GitHub, Okta, Google Workspace, Jamf, and 40+ connectors for automated evidence collection |
-| **Administration** | User management, RBAC, audit logging, risk configuration, system health monitoring |
+| Module                      | Description                                                                                                                      |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| **Compliance**              | Controls library, framework readiness (SOC 2, ISO 27001, NIST CSF, PCI DSS, HIPAA), evidence collection, cross-framework mapping |
+| **Risk Management**         | Risk register, likelihood/impact scoring, heatmaps, treatment tracking, scenario modeling, risk workflows                        |
+| **Policies**                | Policy lifecycle management with versioning, approval workflows, review scheduling                                               |
+| **Third-Party Risk (TPRM)** | Vendor management, security assessments, contract lifecycle, SLA tracking                                                        |
+| **Trust**                   | Security questionnaires, knowledge base, public-facing trust center portal                                                       |
+| **Audit**                   | Internal/external audit management, evidence requests, findings, auditor portal, FieldGuide integration                          |
+| **Tools**                   | Security awareness training, phishing simulations, certificate management                                                        |
+| **AI & Automation**         | AI-powered risk scoring, auto-categorization, smart search, MCP server integration                                               |
+| **Integrations**            | AWS, Azure, GitHub, Okta, Google Workspace, Jamf, and 40+ connectors for automated evidence collection                           |
+| **Administration**          | User management, RBAC, audit logging, risk configuration, system health monitoring                                               |
 
 For detailed module documentation including API endpoints, see the [API Reference](docs/API.md).
 
@@ -289,39 +289,42 @@ For detailed module documentation including API endpoints, see the [API Referenc
 
 ### Getting Started
 
-| Document | Description |
-|----------|-------------|
+| Document                                        | Description                                                |
+| ----------------------------------------------- | ---------------------------------------------------------- |
 | **[Getting Started Guide](GETTING_STARTED.md)** | Complete setup guide with screenshots for all skill levels |
-| [Quick Start Guide](docs/QUICK_START.md) | Fast-track setup for experienced users |
-| [Demo & Sandbox](docs/DEMO.md) | One-click demo setup with sample data |
-| [Troubleshooting](docs/TROUBLESHOOTING.md) | Common issues and solutions |
+| [Quick Start Guide](docs/QUICK_START.md)        | Fast-track setup for experienced users                     |
+| [Demo & Sandbox](docs/DEMO.md)                  | One-click demo setup with sample data                      |
+| [Troubleshooting](docs/TROUBLESHOOTING.md)      | Common issues and solutions                                |
 
 ### Core Documentation
 
-| Document | Description |
-|----------|-------------|
-| [Architecture Guide](docs/ARCHITECTURE.md) | System architecture, API gateway, microservices, network topology |
-| [API Reference](docs/API.md) | Complete API documentation with endpoints and examples |
-| [Configuration Reference](docs/CONFIGURATION.md) | Environment variables, service configuration, database |
-| [Development Guide](docs/DEVELOPMENT.md) | Local setup, project structure, coding standards, testing |
-| [Deployment Guide](docs/DEPLOYMENT.md) | Production deployment, CI/CD, monitoring, backups |
+| Document                                         | Description                                                       |
+| ------------------------------------------------ | ----------------------------------------------------------------- |
+| [Architecture Guide](docs/ARCHITECTURE.md)       | System architecture, API gateway, microservices, network topology |
+| [API Reference](docs/API.md)                     | Complete API documentation with endpoints and examples            |
+| [Configuration Reference](docs/CONFIGURATION.md) | Environment variables, service configuration, database            |
+| [Development Guide](docs/DEVELOPMENT.md)         | Local setup, project structure, coding standards, testing         |
+| [Deployment Guide](docs/DEPLOYMENT.md)           | Production deployment, CI/CD, monitoring, backups                 |
+| [Database Schema](docs/DATABASE_SCHEMA.md)       | All Prisma models, enums, and entity relationships                |
+| [Shared Library](services/shared/README.md)      | Auth, storage, events, utils, and shared types                    |
 
 ### Security
 
-| Document | Description |
-|----------|-------------|
-| [Security Policy](SECURITY.md) | Vulnerability reporting and policies |
-| [Security Model](docs/SECURITY_MODEL.md) | Authentication, authorization, and hardening |
-| [Permissions Matrix](docs/PERMISSIONS_MATRIX.md) | Role-based access control definitions |
+| Document                                         | Description                                  |
+| ------------------------------------------------ | -------------------------------------------- |
+| [Security Policy](SECURITY.md)                   | Vulnerability reporting and policies         |
+| [Security Model](docs/SECURITY_MODEL.md)         | Authentication, authorization, and hardening |
+| [Permissions Matrix](docs/PERMISSIONS_MATRIX.md) | Role-based access control definitions        |
 
 ### Operations
 
-| Document | Description |
-|----------|-------------|
-| [Environment Configuration](docs/ENV_CONFIGURATION.md) | Detailed environment variable reference |
-| [Module Configuration](docs/MODULE_CONFIGURATION.md) | Enable/disable platform modules |
-| [Production Deployment](docs/PRODUCTION_DEPLOYMENT.md) | Production-ready deployment checklist |
-| [Monitoring](monitoring/README.md) | Prometheus + Grafana setup |
+| Document                                               | Description                              |
+| ------------------------------------------------------ | ---------------------------------------- |
+| [Environment Configuration](docs/ENV_CONFIGURATION.md) | Detailed environment variable reference  |
+| [Module Configuration](docs/MODULE_CONFIGURATION.md)   | Enable/disable platform modules          |
+| [Production Deployment](docs/PRODUCTION_DEPLOYMENT.md) | Production-ready deployment checklist    |
+| [Remote Deployment](docs/REMOTE_DEPLOYMENT.md)         | Deploying on remote servers, VMs, or LAN |
+| [Monitoring](monitoring/README.md)                     | Prometheus + Grafana setup               |
 
 ---
 

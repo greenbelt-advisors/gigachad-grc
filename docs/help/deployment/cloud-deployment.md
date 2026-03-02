@@ -7,6 +7,7 @@ GigaChad GRC can be deployed to the cloud using Supabase for database/storage an
 ### Option 1: Supabase + Vercel (Recommended)
 
 The recommended cloud deployment uses:
+
 - **Vercel** for frontend hosting and serverless API functions
 - **Supabase** for PostgreSQL database and file storage
 - **Okta** for enterprise SSO authentication
@@ -15,7 +16,7 @@ The recommended cloud deployment uses:
 
 ### Option 2: Docker Self-Hosted
 
-For organizations requiring on-premise deployment, GigaChad GRC supports Docker Compose deployment. See the [Self-Hosted Deployment Guide](self-hosted-deployment.md).
+For organizations requiring on-premise deployment, GigaChad GRC supports Docker Compose deployment. See the [Self-Hosted Deployment Guide](../../DEPLOYMENT.md).
 
 ---
 
@@ -73,16 +74,16 @@ Navigate to **Settings > Database** for connection strings:
 
 Configure these in Vercel Dashboard (**Settings > Environment Variables**):
 
-| Variable | Description |
-|----------|-------------|
-| `VITE_OKTA_ISSUER` | Your Okta authorization server URL |
-| `VITE_OKTA_CLIENT_ID` | Okta application client ID |
-| `DATABASE_URL` | Supabase pooled connection string |
-| `DIRECT_URL` | Supabase direct connection string |
-| `SUPABASE_URL` | Supabase project URL |
-| `SUPABASE_ANON_KEY` | Supabase anonymous key |
-| `SUPABASE_SERVICE_KEY` | Supabase service role key |
-| `ENCRYPTION_KEY` | 32-byte hex key for encryption |
+| Variable               | Description                        |
+| ---------------------- | ---------------------------------- |
+| `VITE_OKTA_ISSUER`     | Your Okta authorization server URL |
+| `VITE_OKTA_CLIENT_ID`  | Okta application client ID         |
+| `DATABASE_URL`         | Supabase pooled connection string  |
+| `DIRECT_URL`           | Supabase direct connection string  |
+| `SUPABASE_URL`         | Supabase project URL               |
+| `SUPABASE_ANON_KEY`    | Supabase anonymous key             |
+| `SUPABASE_SERVICE_KEY` | Supabase service role key          |
+| `ENCRYPTION_KEY`       | 32-byte hex key for encryption     |
 
 ### Step 5: Run Database Migrations
 
@@ -98,13 +99,13 @@ npx prisma migrate deploy
 
 Create these storage buckets in Supabase:
 
-| Bucket | Access | Purpose |
-|--------|--------|---------|
-| `evidence` | Private | Evidence files and documents |
-| `policies` | Private | Policy document storage |
-| `integrations` | Private | Integration configuration |
-| `questionnaires` | Private | Questionnaire attachments |
-| `trust-center` | Public | Trust center public assets |
+| Bucket           | Access  | Purpose                      |
+| ---------------- | ------- | ---------------------------- |
+| `evidence`       | Private | Evidence files and documents |
+| `policies`       | Private | Policy document storage      |
+| `integrations`   | Private | Integration configuration    |
+| `questionnaires` | Private | Questionnaire attachments    |
+| `trust-center`   | Public  | Trust center public assets   |
 
 ---
 
@@ -120,10 +121,12 @@ Create these storage buckets in Supabase:
 ## Monitoring & Logs
 
 ### Vercel Logs
+
 - Access via Vercel Dashboard > **Deployments > Logs**
 - Real-time function execution logs
 
 ### Supabase Logs
+
 - Access via Supabase Dashboard > **Logs**
 - Database query logs and performance metrics
 
@@ -142,14 +145,17 @@ Create these storage buckets in Supabase:
 ## Scaling Considerations
 
 ### Database
+
 - Supabase Pro supports up to 8GB database
 - For larger deployments, consider Supabase Enterprise
 
 ### API
+
 - Vercel Functions auto-scale based on traffic
 - Cold starts can be mitigated with Edge Functions
 
 ### Storage
+
 - Supabase Storage has no hard limits on Pro plan
 - Consider CDN for frequently accessed files
 
@@ -158,10 +164,11 @@ Create these storage buckets in Supabase:
 ## Support
 
 For deployment assistance:
+
 - Technical Documentation: `/docs/deployment/`
 - Community Support: GitHub Discussions
 - Enterprise Support: Contact your account manager
 
 ---
 
-*Last Updated: December 2025*
+_Last Updated: December 2025_

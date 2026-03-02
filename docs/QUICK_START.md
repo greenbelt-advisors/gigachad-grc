@@ -37,6 +37,7 @@ That's it! The script handles everything: environment setup, Docker containers, 
 ```
 
 The script will ask what you want to do:
+
 - **Demo Mode** - One-click demo with sample data
 - **Dev Mode** - Set up for local development
 - **Docker Only** - Start all services in containers
@@ -94,7 +95,7 @@ Then start services manually:
 # Terminal 1 - Backend
 cd services/controls && npm run start:dev
 
-# Terminal 2 - Frontend  
+# Terminal 2 - Frontend
 cd frontend && npm run dev
 ```
 
@@ -110,13 +111,13 @@ Everything containerized:
 
 ## Access Points
 
-| Service | URL | Credentials |
-|---------|-----|-------------|
-| **Frontend** | http://localhost:3000 | Click "Dev Login" |
-| **API Docs** | http://localhost:3001/api/docs | - |
-| **Keycloak Admin** | http://localhost:8080 | admin / admin |
-| **RustFS Console** | http://localhost:9001 | rustfsadmin / (see .env) |
-| **Grafana** | http://localhost:3003 | admin / admin |
+| Service            | URL                            | Credentials              |
+| ------------------ | ------------------------------ | ------------------------ |
+| **Frontend**       | http://localhost:3000          | Click "Dev Login"        |
+| **API Docs**       | http://localhost:3001/api/docs | -                        |
+| **Keycloak Admin** | http://localhost:8080          | admin / admin            |
+| **RustFS Console** | http://localhost:9001          | rustfsadmin / (see .env) |
+| **Grafana**        | http://localhost:3003          | admin / admin            |
 
 ---
 
@@ -186,6 +187,7 @@ docker compose exec postgres pg_isready -U grc
 ```
 
 This removes:
+
 - All Docker containers and volumes
 - All `node_modules` directories
 - The `.env` file
@@ -202,7 +204,7 @@ This removes:
 
 ## Getting Help
 
-- 📖 [Full Documentation](./docs/)
+- 📖 [Full Documentation](./)
 - 🐛 [Troubleshooting Guide](./TROUBLESHOOTING.md)
 - 🚀 [Production Deployment](./PRODUCTION_DEPLOYMENT.md)
 - 💬 [GitHub Discussions](../../discussions)
